@@ -4,7 +4,8 @@ FROM alpine
 
 WORKDIR /code
 
-RUN apk update
+RUN apk update  
+RUN apk add py-pip
 
 COPY requirements.txt requirements.txt
 
