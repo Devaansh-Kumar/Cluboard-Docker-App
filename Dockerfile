@@ -1,10 +1,11 @@
 FROM ubuntu
+FROM python:3.9-alpine
 
 WORKDIR /code
 
 RUN apt-get update
-RUN apt-get install python3
-RUN apt install python3-pip
+RUN apt-get install -y python3
+RUN apt install -y python3-pip
 
 COPY requirements.txt requirements.txt
 
