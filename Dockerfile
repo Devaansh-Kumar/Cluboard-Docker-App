@@ -4,7 +4,7 @@ FROM alpine
 
 WORKDIR /code
 
-RUN apk-get update && apk-get upgrade -y && apk-get install gcc
+RUN apk update && apk upgrade -y && apk install gcc
 RUN apk add py-pip
 
 COPY requirements.txt requirements.txt
