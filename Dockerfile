@@ -1,6 +1,6 @@
 FROM ubuntu
 FROM python:3.9
-
+# declaring working directory
 WORKDIR /code
 
 RUN apt-get update
