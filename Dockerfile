@@ -5,6 +5,7 @@ FROM alpine
 WORKDIR /code
 
 RUN apk update  
+RUN apk add --virtual build-deps gcc python-dev musl-dev
 RUN apk add py-pip
 
 COPY requirements.txt requirements.txt
