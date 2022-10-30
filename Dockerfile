@@ -6,7 +6,8 @@ WORKDIR /code
 
 RUN apk update
 RUN apk add python3
-RUN apk add python3-pip
+# RUN apk add python3-pip
+RUN pip --version
 
 COPY requirements.txt requirements.txt
 
