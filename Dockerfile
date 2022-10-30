@@ -5,8 +5,8 @@ FROM alpine
 WORKDIR /code
 
 RUN apk update
-RUN apk install python3
-RUN apk install python3-pip
+RUN apk add python3
+RUN apk add python3-pip
 
 COPY requirements.txt requirements.txt
 
