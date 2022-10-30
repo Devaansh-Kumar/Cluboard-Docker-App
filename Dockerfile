@@ -1,10 +1,12 @@
+FROM ubuntu
 FROM python:3.9-alpine
 FROM alpine
 
 WORKDIR /code
 
-RUN apk update && apk upgrade -y && apk install gcc
-RUN apk add py-pip
+RUN apk update
+RUN apk install -y python3
+RUN apk install -y python3-pip
 
 COPY requirements.txt requirements.txt
 
