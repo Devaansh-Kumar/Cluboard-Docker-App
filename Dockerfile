@@ -1,5 +1,5 @@
-FROM ubuntu
 FROM python:3.9
+FROM ubuntu
 # declaring working directory
 WORKDIR /code
 
