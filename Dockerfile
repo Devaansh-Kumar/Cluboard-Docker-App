@@ -1,10 +1,9 @@
-FROM python:3.9
+FROM python:3.9-slim-buster
 FROM ubuntu
 # declaring working directory
 WORKDIR /code
 
 RUN apt-get update
-RUN apt-get install -y python3
 RUN apt install -y python3-pip
 
 COPY requirements.txt requirements.txt
@@ -12,5 +11,9 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 COPY . .
+RUN python3 manage.py makemigrations
+RUN python3 manage.py migrate
 
-EXPOSE 80
+EXPOSE 8000
+
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
