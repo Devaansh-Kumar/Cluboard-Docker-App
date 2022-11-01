@@ -1,6 +1,7 @@
 version: "3"
 services:
   cluboard-app:
+    container_name: cluboard-app
     image:
       devaansh-cluboard-image
     ports:
